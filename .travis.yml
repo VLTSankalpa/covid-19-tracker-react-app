@@ -1,0 +1,23 @@
+sudo: required
+language: generic
+
+services:
+  - docker
+
+before_install:
+  - docker build -t wltsankalpa/covid-19-tracker-react-app -f Dockerfile.dev .
+
+script:
+  - docker run -e CI=true wltsankalpa/covid-19-tracker-react-app npm run test
+
+deploy:
+  provider: elasticbeanstalk
+  region: 'ap-south-1'
+  app: 'covid-19-tracker-react-app'
+  env: 'react-app-env'
+  bucket_name: 'elasticbeanstalk-ap-south-1-153396620132'
+  bucket_path: 'covid-19-tracker-react-app'
+  on:
+    branch: main
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: $AWS_SECRET_KEY
