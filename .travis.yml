@@ -14,7 +14,7 @@ deploy:
   provider: elasticbeanstalk
   region: 'ap-south-1'
   app: 'covid-19-tracker-react-app'
-  env: 'react-app-env'
+  env: 'Covid19trackerreactapp-env'
   bucket_name: 'elasticbeanstalk-ap-south-1-153396620132'
   bucket_path: 'covid-19-tracker-react-app'
   on:
