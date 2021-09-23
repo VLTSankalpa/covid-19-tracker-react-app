@@ -1,17 +1,29 @@
-import React from 'react';
-import { Typography, Grid } from '@material-ui/core';
-import CardComponent from './Card/Card';
-import styles from './Cards.module.css';
+import React from "react";
+import { Typography, Grid } from "@material-ui/core";
+import CardComponent from "./Card/Card";
+import styles from "./Cards.module.css";
 
 const Info = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
   if (!confirmed) {
-    return 'Loading...';
+    return "Loading...";
   }
 
   return (
     <div className={styles.container}>
-      <p>This React app can be used to visualize the global spread of COVID-19</p>
-        <Typography gutterBottom variant="h4" component="h2">Global Status</Typography>
+      <h1>COVID-19 Tracker React App</h1>
+      <p>
+        This App can be used to visualize the global spread of covid-19 with
+        live updating information on number of new cases, number of deaths in
+        different countries in the world.
+      </p>
+      <p>
+        Main objective of video to demonstrate real world appropriate CI/CD
+        pipeline using following develops technologies like docker, github,
+        travis CI, AWS, React and REST APIs.
+      </p>
+      <Typography gutterBottom variant="h4" component="h2">
+        Global Status
+      </Typography>
       <Grid container spacing={3} justify="center">
         <CardComponent
           className={styles.infected}
