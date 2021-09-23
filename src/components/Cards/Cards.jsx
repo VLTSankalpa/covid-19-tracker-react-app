@@ -13,13 +13,7 @@ const Info = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
       <h1>COVID-19 Tracker React App</h1>
       <p>
         This App can be used to visualize the global spread of covid-19 with
-        live updating information on number of new cases, number of deaths in
-        different countries in the world.
-      </p>
-      <p>
-        Main objective of video to demonstrate real world appropriate CI/CD
-        pipeline using following develops technologies like docker, github,
-        travis CI, AWS, React and REST APIs.
+        live updating information.
       </p>
       <Typography gutterBottom variant="h4" component="h2">
         Global Status
